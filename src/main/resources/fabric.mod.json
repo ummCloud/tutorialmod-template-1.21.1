@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "tutorialmod",
+	"version": "${version}",
+	"name": "tutorialmod",
+	"description": "I'm thinking...",
+	"authors": [
+		"umCloud"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/tutorialmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.umcloud.tutorialmod.Tutorialmod"
+		],
+		"fabric-datagen": [
+			"net.umcloud.tutorialmod.TutorialmodDataGenerator"
+		],
+		"client": [
+			"net.umcloud.tutorialmod.TutorialmodClient"
+		]
+	},
+	"mixins": [
+		"tutorialmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
