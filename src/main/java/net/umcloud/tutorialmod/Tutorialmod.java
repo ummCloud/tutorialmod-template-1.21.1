@@ -11,6 +11,6 @@ public class Tutorialmod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+//hello
 	}
 }
