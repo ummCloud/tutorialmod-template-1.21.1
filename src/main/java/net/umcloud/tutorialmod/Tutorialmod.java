@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.umcloud.tutorialmod.block.ModBlocks;
+import net.umcloud.tutorialmod.component.ModDataComponentTypes;
 import net.umcloud.tutorialmod.item.ModItemGroups;
 import net.umcloud.tutorialmod.item.ModItems;
 import net.umcloud.tutorialmod.loot.ModLootTables;
@@ -22,6 +23,8 @@ public class Tutorialmod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
+
+		ModDataComponentTypes.registerDataComponentTypes();
 
 		ModLootTables.registerLootTables();
 	}
