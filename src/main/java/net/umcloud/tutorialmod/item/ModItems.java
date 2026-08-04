@@ -10,6 +10,7 @@ import net.minecraft.util.Identifier;
 import net.umcloud.tutorialmod.Tutorialmod;
 import net.umcloud.tutorialmod.item.custom.ChiselItem;
 import net.umcloud.tutorialmod.item.custom.HammerItem;
+import net.umcloud.tutorialmod.item.custom.ModArmorItem;
 
 import java.util.List;
 
@@ -53,7 +54,7 @@ public class ModItems {
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.PINK_GARNET, 7, -3.4f))));
 
     public static final Item PINK_GARNET_HELMET = registerItem("pink_garnet_helmet",
-            new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+            new ModArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
                     .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(15))));
     public static final Item PINK_GARNET_LEGGINGS = registerItem("pink_garnet_leggings",
             new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
