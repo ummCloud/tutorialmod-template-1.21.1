@@ -56,6 +56,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter);
         offerSlabRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_GARNET_SLAB, ModBlocks.PINK_GARNET_BLOCK);
 
+        offerSmithingTrimRecipe(exporter, ModItems.KAUPEN_SMITHING_TEMPLATE, Identifier.of(Tutorialmod.MOD_ID, "kaupen"));
+
 
 
     }
