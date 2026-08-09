@@ -12,6 +12,7 @@ import net.umcloud.tutorialmod.Tutorialmod;
 import net.umcloud.tutorialmod.item.custom.ChiselItem;
 import net.umcloud.tutorialmod.item.custom.HammerItem;
 import net.umcloud.tutorialmod.item.custom.ModArmorItem;
+import net.umcloud.tutorialmod.sound.ModSounds;
 
 import java.util.List;
 
@@ -72,6 +73,9 @@ public class ModItems {
 
     public static final Item KAUPEN_SMITHING_TEMPLATE = registerItem("kaupen_armor_trim_smithing_template",
             SmithingTemplateItem.of(Identifier.of(Tutorialmod.MOD_ID, "kaupen"), FeatureFlags.VANILLA));
+
+    public static final Item BAR_BRAWL_MUSIC_DISC = registerItem("bar_brawl_music_disc",
+            new Item(new Item.Settings().jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).maxCount(1)));
 
     public static final Item KAUPEN_BOW = registerItem("kaupen_bow",
             new BowItem(new Item.Settings().maxDamage(500)));
