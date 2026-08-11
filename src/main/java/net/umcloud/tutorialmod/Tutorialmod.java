@@ -14,9 +14,11 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.umcloud.tutorialmod.block.ModBlocks;
 import net.umcloud.tutorialmod.component.ModDataComponentTypes;
+import net.umcloud.tutorialmod.effect.ModEffects;
 import net.umcloud.tutorialmod.item.ModItemGroups;
 import net.umcloud.tutorialmod.item.ModItems;
 import net.umcloud.tutorialmod.loot.ModLootTables;
+import net.umcloud.tutorialmod.sound.ModSounds;
 import net.umcloud.tutorialmod.util.HammerUsageEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,11 +34,14 @@ public class Tutorialmod implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
-		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
-
 		ModDataComponentTypes.registerDataComponentTypes();
+		ModSounds.registerSounds();
+
+		ModEffects.registerEffects();
 
 		ModLootTables.registerLootTables();
+
+		FuelRegistry.INSTANCE.add(ModItems.STARLIGHT_ASHES, 600);
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 		AttackEntityCallback.EVENT.register(((player, world, hand, entity, hitResult) -> {
